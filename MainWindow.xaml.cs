@@ -17,10 +17,10 @@ namespace MatchGame
 {
     using System.Windows.Threading;
 
-/// <summary>
-/// Interaction logic for MainWindow.xaml
-/// </summary>
-public partial class MainWindow : Window
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
     {
         DispatcherTimer timer = new DispatcherTimer();
         int tenthsOfSecondsElapsed;
@@ -68,10 +68,10 @@ public partial class MainWindow : Window
                 {
                     Console.WriteLine(textBlock.Name);
                     textBlock.Visibility = Visibility.Visible;
-                    int index = random.Next(animalEmoji.Count);
-                    string nextEmoji = animalEmoji[index];
-                    textBlock.Text = nextEmoji;
-                    animalEmoji.RemoveAt(index);
+                int index = random.Next(animalEmoji.Count);
+                string nextEmoji = animalEmoji[index];
+                textBlock.Text = nextEmoji;
+                animalEmoji.RemoveAt(index);
                 }
             }
             timer.Start();
